@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "GeminiChat.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "GeminiChat.py"
+    }
+  ]
+}

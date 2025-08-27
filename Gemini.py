@@ -1,8 +1,9 @@
 import google.generativeai as genai
 from api import Gemini_API_KEY as api
+import os
 
-genai.configure(api_key=api)
-model = genai.GenerativeModel('gemini-pro')
+genai.configure(api_key=os.getenv("Gemini_API_KEY"))
+model = genai.GenerativeModel('gemini-2.5-flash')
 chat = model.start_chat(history=[])
 while True:
     user_input = input("\nYou: ")
